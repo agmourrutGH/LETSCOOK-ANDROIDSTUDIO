@@ -68,6 +68,14 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
+        // Verificar si el usuario es "admin" y la contraseña es "admin"
+        if (email.equals("admin") && password.equals("admin")) {
+            Toast.makeText(this, "Inicio de sesión exitoso como admin", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(LoginActivity.this, IndexActivity.class));
+            finish(); // Cierra la actividad de login
+            return;
+        }
+
         // Verificar en la base de datos
         boolean isValidUser = databaseHelper.checkUser(email, password);
         if (isValidUser) {

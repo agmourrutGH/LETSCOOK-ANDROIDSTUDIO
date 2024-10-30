@@ -18,6 +18,7 @@ public class PerfilActivity extends AppCompatActivity {
     private TextView emailTextView;
     private ImageView profilePicture;
     private DatabaseHelper databaseHelper;
+    private ImageView btnBackPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class PerfilActivity extends AppCompatActivity {
         nameTextView = findViewById(R.id.name);
         emailTextView = findViewById(R.id.email);
         profilePicture = findViewById(R.id.profiles_picture);
+        btnBackPerfil = findViewById(R.id.btnBackPerfil);
 
         // Inicializar el helper de la base de datos
         databaseHelper = new DatabaseHelper(this);
@@ -42,6 +44,13 @@ public class PerfilActivity extends AppCompatActivity {
             // Manejar el caso donde el userId no es válido
             // Tal vez mostrar un mensaje de error o cerrar la actividad
         }
+
+        btnBackPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Regresa a la actividad anterior
+            }
+        });
 
         // Redirigir a la actividad de editar perfil
         TextView editPerfil = findViewById(R.id.edit_perfil);
@@ -62,6 +71,15 @@ public class PerfilActivity extends AppCompatActivity {
                 Intent intent = new Intent(PerfilActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish(); // Finaliza la actividad actual
+            }
+        });
+        Button uploadRecipeButton = findViewById(R.id.upload_recipe);
+        uploadRecipeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PerfilActivity.this, SubirRecetasActivity.class);
+                intent.putExtra("USER_ID", userId); // Opcional: enviar el ID de usuario si es necesario
+                startActivity(intent);
             }
         });
     }

@@ -55,6 +55,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + COLUMN_RECIPE_USER_ID + " INTEGER,"
                 + "FOREIGN KEY(" + COLUMN_RECIPE_USER_ID + ") REFERENCES " + TABLE_USERS + "(" + COLUMN_ID + "))";
         db.execSQL(CREATE_RECIPES_TABLE);
+
     }
 
 
@@ -103,6 +104,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_RECIPES, null, values);
         db.close();
     }
+
     public String getUserName(int userId) {
         String name = null;
         SQLiteDatabase db = this.getReadableDatabase();
@@ -153,7 +155,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.update(TABLE_USERS, values, COLUMN_ID + "=?", new String[]{String.valueOf(userId)});
         db.close();
     }
-
-
-
 }

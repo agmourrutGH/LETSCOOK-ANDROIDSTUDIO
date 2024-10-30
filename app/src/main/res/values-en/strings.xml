@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LetsCook</string>
+    <string name="app_name">Lets Cook</string>
     <string name="error_complete_fields">Please complete all fields</string>
     <string name="error_minimum_length">The password must be at least 8 characters long</string>
     <string name="error_alphanumeric">The password can only contain alphanumeric characters</string>

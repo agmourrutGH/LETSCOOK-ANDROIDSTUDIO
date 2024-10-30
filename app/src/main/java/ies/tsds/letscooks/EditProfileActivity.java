@@ -17,7 +17,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private static final int PICK_IMAGE = 1;
     private EditText nombreEditText, emailEditText;
-    private ImageView profilePicture;
+    private ImageView profilePicture, btnBackEditPerfil;
     private DatabaseHelper databaseHelper;
     private int userId;
     private Uri selectedImageUri;
@@ -31,8 +31,10 @@ public class EditProfileActivity extends AppCompatActivity {
         nombreEditText = findViewById(R.id.nombre);
         emailEditText = findViewById(R.id.email);
         profilePicture = findViewById(R.id.profile_picture);
+        btnBackEditPerfil = findViewById(R.id.btnBackEditPerfil);
         Button changePhotoButton = findViewById(R.id.change_photo_btn);
         Button actualizarButton = findViewById(R.id.btn_actualizar_perfil);
+
 
         // Inicializa el helper de la base de datos
         databaseHelper = new DatabaseHelper(this);
@@ -54,6 +56,14 @@ public class EditProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 updateProfile();
+            }
+        });
+
+        // Configurar el botón de retroceso
+        btnBackEditPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Regresa a la actividad anterior
             }
         });
     }
