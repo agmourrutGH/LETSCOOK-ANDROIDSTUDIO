@@ -1,0 +1,5 @@
+<!-- res/drawable/rounded_footer_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ecdfcc" /> <!-- Color de fondo -->
+    <corners android:radius="16dp" /> <!-- Radio de las esquinas -->
+</shape>

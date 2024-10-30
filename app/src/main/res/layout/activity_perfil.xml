@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f3e5"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        style="@style/ProfileHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-25dp"
+        android:text="Perfil del Usuario"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        style="@style/ProfileBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center">
+
+            <!-- Fondo circular -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circular_background" />
+
+            <!-- Imagen del perfil -->
+            <ImageView
+                android:id="@+id/profiles_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/image_null"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true" /> <!-- Asegúrate de que esto esté presente -->
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/edit_perfil"
+            style="@style/EditProfileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="#eeeeee"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Editar Perfil"
+            android:textColor="#2196f3"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/NameEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="#eeeeee"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Juan Pérez"
+            android:textColor="#1c274c"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/email"
+            style="@style/NameEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="#eeeeee"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="juan.perez@example.com"
+            android:textColor="#1c274c"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/upload_recipe"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Subir Receta" /> <!-- Usa el estilo aquí -->
+
+        <Button
+
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Cambiar contraseña" /> <!-- Usa el estilo aquí -->
+
+        <Button
+
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Soporte" /> <!-- Usa el estilo aquí -->
+
+        <Button
+            android:id="@+id/logout"
+            style="@style/LogoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Logout" /> <!-- Usa el estilo aquí -->
+    </LinearLayout>
+
+    <TextView
+        style="@style/FooterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:text="© 2024 LetsCook. Todos los derechos reservados."
+        android:textColor="#777"
+        android:textSize="14sp" />
+</LinearLayout>
+

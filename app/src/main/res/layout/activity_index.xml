@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e0e0">
+
+
+    <!-- Contenido principal dentro de ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/contenidoPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Título principal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="¡Bienvenido a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="4dp"/>
+
+                <TextView
+                    android:id="@+id/titleLetsCook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LetsCook"
+                    android:textSize="24sp"
+                    android:textColor="#FF5722"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:text="!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+            <!-- Buscador -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ecdfcc"
+                android:padding="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="4dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Busca lo que necesites"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:textSize="16sp"
+                    android:inputType="text"/>
+            </LinearLayout>
+            <!-- Sección de ingredientes destacados -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destacados"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="8dp" />
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginBottom="20dp">
+
+                <!-- Ejemplo de cada tarjeta en destacados -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+
+                        android:background="@drawable/background_secciones">
+
+                        <ImageView
+                            android:id="@+id/image_carnes"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/pollo" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carnes"
+                        android:textSize="20sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <!-- Repetir LinearLayout para las otras tarjetas -->
+            </GridLayout>
+
+            <!-- Sección de inspección de recetas -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¡Inspecciona recetas!"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_secciones1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¡Encuentra tu plato!"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!-- Footer de navegación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_footer_background"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Iconos de la barra de menú -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_home"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:src="@drawable/home_svgrepo_com" />
+
+            <ImageView
+                android:id="@+id/image_chef_hat"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:src="@drawable/chef_hat_minimalistic_svgrepo_com" />
+
+            <ImageView
+                android:id="@+id/image_kitchen"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:src="@drawable/kitchen_svgrepo_com" />
+        </LinearLayout>
+
+
+        <!-- Botón de salir -->
+        <ImageButton
+            android:id="@+id/btnSalir"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit_svgrepo_com"
+            android:background="@null"
+            android:layout_gravity="end|center_vertical" />
+    </LinearLayout>
+</RelativeLayout>

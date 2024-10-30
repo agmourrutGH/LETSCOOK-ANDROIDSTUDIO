@@ -10,10 +10,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LetsCooks"
+        android:theme="@style/Theme.LetsCook"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".CategoriasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListadoItemsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SubirRecetasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleRecetasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IndexActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

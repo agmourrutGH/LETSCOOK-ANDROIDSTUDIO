@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LetsCook</string>
+    <string name="error_complete_fields">Please complete all fields</string>
+    <string name="error_minimum_length">The password must be at least 8 characters long</string>
+    <string name="error_alphanumeric">The password can only contain alphanumeric characters</string>
+    <string name="registration_success">Registration successful</string>
+    <string name="registration_error">Error registering: %1$s</string>
+    <string name="login_success">Login successful</string>
+    <string name="login_error">Incorrect username or password</string>
+    <string name="button_exit">Exit</string>
+    <string name="button_login">Login</string>
+    <string name="button_register">Register</string>
+    <string name="label_username">Username:</string>
+    <string name="title_login">Login</string>
+    <string name="title_register">Register</string>
+    <string name="label_name">Name</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+</resources>

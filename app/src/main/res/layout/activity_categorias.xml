@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#e0e0e0">
+
+    <!-- Contenedor para el botón de retroceso y el título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:layout_marginBottom="32dp"> <!-- Espacio adicional entre el título y el grid -->
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:src="@drawable/back_buttons_multimedia_svgrepo_com"
+            android:contentDescription="Botón de retroceso" />
+
+        <TextView
+            android:id="@+id/tituloCategorias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categorías"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"/> <!-- Margen entre el botón y el título -->
+    </LinearLayout>
+
+    <!-- Contenedor para las imágenes y nombres de recetas -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:layout_gravity="center">
+
+        <!-- Ejemplo de ítem 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="115dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baja_calorias"
+                android:contentDescription="Imagen de receta 1"
+                android:background="@drawable/circular_background"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bajo en calorías"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <!-- Ejemplo de ítem 2 -->
+        <LinearLayout
+            android:id="@+id/itemAltoProteinas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:id="@+id/image_alto_proteina"
+                android:layout_width="180dp"
+                android:layout_height="115dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/altoproteinas"
+                android:contentDescription="Imagen de receta 2"
+                android:background="@drawable/circular_background"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alto en proteínas"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <!-- Ejemplo de ítem 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/alto_fibras"
+                android:contentDescription="Imagen de receta 3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rico en fibra"
+                android:gravity="center"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <!-- Ejemplo de ítem 4 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/sin_gluten"
+                android:contentDescription="Imagen de receta 4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sin gluten"
+                android:gravity="center"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <!-- Ejemplo de ítem 5 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/bajo_carbo"
+                android:contentDescription="Imagen de receta 5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bajo en carbohidratos"
+                android:gravity="center"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <!-- Ejemplo de ítem 6 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/vegano"
+                android:contentDescription="Imagen de receta 6"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegano"
+                android:gravity="center"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <!-- Ejemplo de ítem 7 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/bajo_sodio"
+                android:contentDescription="Imagen de receta 7"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bajo en sodio"
+                android:gravity="center"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <!-- Ejemplo de ítem 8 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/alto_antioxidante"
+                android:contentDescription="Imagen de receta 8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alto en antioxidantes"
+                android:gravity="center"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+    </GridLayout>
+
+    <!-- Contenedor de la barra de menú -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_footer_background"
+        android:padding="8dp"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Iconos de la barra de menú -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_home"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:src="@drawable/home_svgrepo_com" />
+
+            <ImageView
+                android:id="@+id/image_chef_hat"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:src="@drawable/chef_hat_minimalistic_svgrepo_com" />
+
+            <ImageView
+                android:id="@+id/image_kitchen"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:src="@drawable/kitchen_svgrepo_com" />
+        </LinearLayout>
+
+        <!-- Botón de salir -->
+        <ImageButton
+            android:id="@+id/btnSalir"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:src="@drawable/exit_svgrepo_com"
+            android:background="@null"
+            android:layout_gravity="end|center_vertical" />
+    </LinearLayout>
+
+</LinearLayout>
