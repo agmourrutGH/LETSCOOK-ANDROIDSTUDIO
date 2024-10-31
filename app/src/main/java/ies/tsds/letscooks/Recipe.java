@@ -20,6 +20,9 @@ public class Recipe implements Serializable {
         this.image = image;
     }
 
+    public Recipe(int id, String tortillaDePapas, String description, int tortillaDePapa) {
+    }
+
     // Getters
     public int getId() {
         return id;

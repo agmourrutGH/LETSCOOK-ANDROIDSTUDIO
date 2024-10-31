@@ -58,7 +58,9 @@ public class PerfilActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PerfilActivity.this, EditProfileActivity.class);
+                intent.putExtra("USER_ID", userId); // Asegúrate de pasar el userId correcto
                 startActivity(intent);
+
             }
         });
 
@@ -82,6 +84,17 @@ public class PerfilActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Obtener el userId desde el Intent
+        int userId = getIntent().getIntExtra("USER_ID", -1);
+        if (userId != -1) {
+            // Cargar datos del usuario
+            loadUserData(userId);
+        }
     }
 
     private void loadUserData(int userId) {

@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         // Validar que la contraseña tenga al menos 8 caracteres y solo contenga caracteres alfanuméricos
-        if (password.length() < 8) {
+        if (password.length() < 5) {
             Toast.makeText(this, "La contraseña debe tener al menos 8 caracteres", Toast.LENGTH_SHORT).show();
             return;
         }

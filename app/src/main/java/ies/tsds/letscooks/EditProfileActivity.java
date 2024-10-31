@@ -66,6 +66,26 @@ public class EditProfileActivity extends AppCompatActivity {
                 finish(); // Regresa a la actividad anterior
             }
         });
+
+        // Verificar si el userId es válido
+        if (userId != -1) {
+            // Cargar datos del usuario
+            loadUserData(userId);
+        } else {
+            // Manejar el caso donde el userId no es válido
+            // Tal vez mostrar un mensaje de error o cerrar la actividad
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Obtener el userId desde el Intent
+        int userId = getIntent().getIntExtra("USER_ID", -1);
+        if (userId != -1) {
+            // Cargar datos del usuario
+            loadUserData(userId);
+        }
     }
 
     private void loadUserData(int userId) {
@@ -104,10 +124,8 @@ public class EditProfileActivity extends AppCompatActivity {
         // Actualiza en la base de datos
         databaseHelper.updateUserProfile(userId, nombre, email, selectedImageUri != null ? selectedImageUri.toString() : null);
 
-        // Redirigir a PerfilActivity
-        Intent intent = new Intent(EditProfileActivity.this, PerfilActivity.class);
-        intent.putExtra("USER_ID", userId);
-        startActivity(intent);
-        finish(); // Finaliza esta actividad
+        // En lugar de iniciar una nueva actividad, simplemente termina esta y regresa a la anterior
+        finish();
     }
+
 }
