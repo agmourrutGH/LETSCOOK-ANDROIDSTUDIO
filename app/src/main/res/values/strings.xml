@@ -2,12 +2,14 @@
 <resources>
     <string name="app_name">Lets Cook</string>
     <string name="error_complete_fields">Por favor completa todos los campos</string>
+    <string name="recipe_uploaded">Receta subida exitosamente!</string>
     <string name="error_minimum_length">La contraseña debe tener al menos 8 caracteres</string>
     <string name="error_alphanumeric">La contraseña solo puede contener caracteres alfanuméricos</string>
     <string name="registration_success">Registro exitoso</string>
     <string name="registration_error">Error al registrar: %1$s</string>
     <string name="login_success">Inicio de sesión exitoso</string>
     <string name="login_error">Usuario o contraseña incorrectos</string>
+    <string name="login_failed">Usuario o contraseña incorrectos</string>
     <string name="button_exit">Salir</string>
     <string name="button_login">Ingresar</string>
     <string name="button_register">Registrarse</string>

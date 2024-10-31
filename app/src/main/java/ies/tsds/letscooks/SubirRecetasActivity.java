@@ -85,7 +85,7 @@ public class SubirRecetasActivity extends AppCompatActivity {
 
         // Validar campos
         if (recipeName.isEmpty() || recipeDescription.isEmpty() || recipeIngredients.isEmpty() || selectedImageUri == null) {
-            Toast.makeText(this, "Por favor completa todos los campos y selecciona una imagen.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_complete_fields), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -95,7 +95,7 @@ public class SubirRecetasActivity extends AppCompatActivity {
         databaseHelper.addRecipe(recipeName, recipeDescription, recipeIngredients, imagePath, userId);
 
         // Mensaje de éxito y volver a la actividad anterior
-        Toast.makeText(this, "Receta subida exitosamente!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.recipe_uploaded), Toast.LENGTH_SHORT).show();
         finish(); // Volver a la actividad anterior
     }
 }
