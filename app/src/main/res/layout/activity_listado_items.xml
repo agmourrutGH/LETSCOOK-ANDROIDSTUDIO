@@ -4,196 +4,175 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center"
     android:background="#e0e0e0">
 
+    <!-- Contenedor para el botón de retroceso y el título -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="start|center_vertical"
-        android:layout_marginBottom="16dp"> <!-- Espacio adicional entre el título y el grid -->
+        android:layout_marginBottom="32dp">
 
         <ImageView
-            android:id="@+id/btnBackListRecetas"
+            android:id="@+id/btnBack"
             android:layout_width="65dp"
             android:layout_height="35dp"
             android:src="@drawable/back_buttons_multimedia_svgrepo_com"
-            android:contentDescription="Botón de retroceso" />
+            android:contentDescription="@string/button_back" />
 
         <TextView
             android:id="@+id/tituloCategorias"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Listado de Recetas"
+            android:text="@string/titulo_categorias"
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginStart="16dp"/> <!-- Margen entre el botón y el título -->
+            android:layout_marginStart="16dp"/>
     </LinearLayout>
 
-    <GridLayout
+    <!-- ScrollView para las imágenes y nombres de recetas -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="2"
-        android:layout_marginTop="16dp"
-        android:padding="8dp">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="8dp">
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
-            <ImageView
-                android:id="@+id/recipe_image_1"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/rounded_corners"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/nombre_receta_1"
-                android:layout_width="wrap_content"
+            <!-- Ítem 1: Tortilla de Papas -->
+            <LinearLayout
+                android:id="@+id/itemTortilla"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#000"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
-    </GridLayout>
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="2"
-        android:layout_marginTop="16dp"
-        android:padding="8dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tortilla_de_papa"
+                    android:contentDescription="Imagen de receta: Tortilla de Papas"
+                    android:background="@drawable/circular_background"/>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tortilla_de_papa"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
 
-            <ImageView
-                android:id="@+id/recipe_image_2"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/rounded_corners"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/nombre_receta_2"
-                android:layout_width="wrap_content"
+            <!-- Ítem 2: Hígado Encebollado -->
+            <LinearLayout
+                android:id="@+id/itemHigado"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#000"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
-    </GridLayout>
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="2"
-        android:layout_marginTop="16dp"
-        android:padding="8dp">
+                <ImageView
+                    android:id="@+id/image_alto_proteina"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/higado_encebollado"
+                    android:contentDescription="Imagen de receta: Higado Encebollado"
+                    android:background="@drawable/circular_background"/>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/higado_encebollado"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
 
-            <ImageView
-                android:id="@+id/recipe_image_3"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/rounded_corners"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/nombre_receta_3"
-                android:layout_width="wrap_content"
+            <!-- Ítem 3: Pollo al Horno -->
+            <LinearLayout
+                android:id="@+id/itemPollo"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#000"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
-    </GridLayout>
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="2"
-        android:layout_marginTop="16dp"
-        android:padding="8dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pollo_horno"
+                    android:contentDescription="Imagen de receta: Pollo al Horno"/>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pollo_al_horno"
+                    android:gravity="center"
+                    android:textColor="#000000"/>
+            </LinearLayout>
 
-            <ImageView
-                android:id="@+id/recipe_image_4"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/rounded_corners"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/nombre_receta_4"
-                android:layout_width="wrap_content"
+            <!-- Ítem 4: Cerdo con Mostaza y Miel -->
+            <LinearLayout
+                android:id="@+id/itemCerdo"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#000"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
-    </GridLayout>
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="2"
-        android:layout_marginTop="16dp"
-        android:padding="8dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cerdo_mostaza"
+                    android:contentDescription="Imagen de receta: Cerdo con Mostaza"/>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cerdo_con_mostaza"
+                    android:gravity="center"
+                    android:textColor="#000000"/>
+            </LinearLayout>
 
-            <ImageView
-                android:id="@+id/recipe_image_5"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/rounded_corners"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/nombre_receta_5"
-                android:layout_width="wrap_content"
+            <!-- Ítem 5: Ensalada de Atún -->
+            <LinearLayout
+                android:id="@+id/itemAtun"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#000"
-                android:gravity="center_vertical"/>
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/atun_fideos"
+                    android:contentDescription="Imagen de receta: Ensalada de Atún"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ensalada_de_atun"
+                    android:gravity="center"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
         </LinearLayout>
-    </GridLayout>
+    </ScrollView>
 </LinearLayout>
+
+

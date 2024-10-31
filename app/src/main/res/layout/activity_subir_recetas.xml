@@ -16,13 +16,13 @@
             android:layout_height="35dp"
             android:layout_marginStart="-10dp"
             android:layout_marginTop="10dp"
-            android:contentDescription="Botón de retroceso"
+            android:contentDescription="@string/button_back"
             android:src="@drawable/back_buttons_multimedia_svgrepo_com" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subir Receta"
+            android:text="@string/subir_receta"
             android:textSize="32sp"
             android:textColor="#000000"
             android:layout_gravity="center"/>
@@ -33,20 +33,20 @@
             android:layout_height="200dp"
             android:layout_marginBottom="16dp"
             android:background="@android:color/darker_gray"
-            android:contentDescription="Imagen de la receta"
+            android:contentDescription="@string/imagen_receta"
             android:scaleType="centerCrop" />
 
         <Button
             android:id="@+id/btn_select_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seleccionar Imagen"
+            android:text="@string/seleccionar_imagen"
             android:layout_gravity="center"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre de la receta"
+            android:text="@string/nombre_receta"
             android:textColor="#000000"
             android:layout_marginTop="16dp"/>
 
@@ -56,14 +56,14 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:background="@drawable/edit_text_background"
-            android:hint="Ingresa el nombre de la receta"
+            android:hint="@string/ingresa_nombre_receta"
             android:layout_marginTop="8dp"
             android:padding="8dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descripción"
+            android:text="@string/descripcion"
             android:textColor="#000000"
             android:layout_marginTop="16dp"/>
 
@@ -71,7 +71,7 @@
             android:id="@+id/recipe_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ingresa la descripción"
+            android:hint="@string/ingresa_descripcion"
             android:textColor="#000000"
             android:background="@drawable/edit_text_background"
             android:padding="8dp"
@@ -82,7 +82,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingredientes"
+            android:text="@string/ingredientes"
             android:textColor="#000000"
             android:layout_marginTop="16dp"/>
 
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:background="@drawable/edit_text_background"
-            android:hint="Ingresa los ingredientes"
+            android:hint="@string/ingresa_ingredientes"
             android:layout_marginTop="8dp"
             android:padding="8dp"
             android:inputType="textMultiLine"
@@ -103,7 +103,7 @@
             android:id="@+id/btn_submit_recipe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Subir Receta"
+            android:text="@string/subir_receta_btn"
             android:layout_marginTop="16dp"/>
 
     </LinearLayout>

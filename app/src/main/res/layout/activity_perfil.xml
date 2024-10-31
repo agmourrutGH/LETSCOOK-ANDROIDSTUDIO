@@ -11,19 +11,17 @@
         android:id="@+id/btnBackPerfil"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_alignParentStart="true"
         android:layout_marginStart="-170dp"
         android:layout_marginTop="10dp"
-        android:contentDescription="Botón de retroceso"
+        android:contentDescription="@string/button_back"
         android:src="@drawable/back_buttons_multimedia_svgrepo_com" />
 
     <TextView
         style="@style/ProfileHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/btnBack"
         android:layout_marginStart="10dp"
-        android:text="Perfil del Usuario"
+        android:text="@string/perfil_usuario"
         android:textColor="#000000"
         android:textSize="30sp" />
 
@@ -56,7 +54,7 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/image_null"
                 android:scaleType="centerCrop"
-                android:clipToOutline="true" /> <!-- Asegúrate de que esto esté presente -->
+                android:clipToOutline="true" />
         </FrameLayout>
 
         <TextView
@@ -68,7 +66,7 @@
             android:background="#eeeeee"
             android:clickable="true"
             android:gravity="center"
-            android:text="Editar Perfil"
+            android:text="@string/editar_perfil"
             android:textColor="#2196f3"
             android:textSize="20sp" />
 
@@ -81,7 +79,7 @@
             android:background="#eeeeee"
             android:gravity="center"
             android:padding="10dp"
-            android:text="Juan Pérez"
+            android:text="@string/nombre_usuario"
             android:textColor="#1c274c"
             android:textSize="20sp" />
 
@@ -94,7 +92,7 @@
             android:background="#eeeeee"
             android:gravity="center"
             android:padding="10dp"
-            android:text="juan.perez@example.com"
+            android:text="@string/email_usuario"
             android:textColor="#1c274c"
             android:textSize="20sp" />
 
@@ -104,23 +102,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Subir Receta" /> <!-- Usa el estilo aquí -->
+            android:text="@string/subir_receta" />
 
         <Button
-
             style="@style/ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Cambiar contraseña" /> <!-- Usa el estilo aquí -->
+            android:text="@string/cambiar_contrasena" />
 
         <Button
-
             style="@style/ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Soporte" /> <!-- Usa el estilo aquí -->
+            android:text="@string/soporte" />
 
         <Button
             android:id="@+id/logout"
@@ -128,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Logout" /> <!-- Usa el estilo aquí -->
+            android:text="@string/logout" />
     </LinearLayout>
 
     <TextView
@@ -137,8 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="1dp"
-        android:text="© 2024 LetsCook. Todos los derechos reservados."
+        android:text="@string/footer_text"
         android:textColor="#777"
         android:textSize="14sp" />
 </LinearLayout>
-
